@@ -1,0 +1,50 @@
+<div class="row justify-content-center mt-5">
+    <div class="card text-center mt-3">
+        <div class="card-body">
+            <label for="email"><strong>Email</strong></label>
+            <div class="my-3" id="email">
+                <p>{{ userInfos.email }}</p>
+            </div>
+            <label for="nom"><strong>Nom</strong></label>
+            <div class="my-3" id="nom">
+                <p>{{ userInfos.firstName }} {{ userInfos.lastName }}</p>
+            </div>
+            <label for="address"><strong>Adresse</strong></label>
+            <div class="my-3" id="address">
+                <p>{{ userInfos.address.streetNumber }} {{ userInfos.address.street }} {{ userInfos.address.zipCode }}
+                    {{ userInfos.address.town }}</p>
+            </div>
+            <div class="proInfos" *ngIf="psyInfos">
+                <label for="adeli"><strong>Numéro ADELI</strong></label>
+                <div class="my-3" id="adeli">
+                    <p>{{ psyInfos.adeliNumber }}</p>
+                </div>
+                <label for="approach"><strong>Approche thérapeutique</strong></label>
+                <div class="my-3" id="approach">
+                    <p>{{ psyInfos.approach }} </p>
+                </div>
+                <label for="specialization"><strong>Spécialisation</strong></label>
+                <div class="my-3" id="specialization">
+                    <p>{{ psyInfos.specializations }} </p>
+                </div>
+                <label for="price"><strong>Taux horaire</strong></label>
+                <div class="my-3" id="price">
+                    <p>{{ psyInfos.hourPrice }} </p>
+                </div>
+                <label for="consultAddress"><strong>Adresse de consultation</strong></label>
+                <div class="my-3" id="consultAddress">
+                    <p>{{ psyInfos.consultationAddress.streetNumber }} {{ psyInfos.consultationAddress.street }}
+                        {{ psyInfos.consultationAddress.zipCode  }} {{ psyInfos.consultationAddress.town }}</p>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col">
+                    <p-button label="Back" (onClick)="previousPage()" icon="pi pi-angle-left"></p-button>
+                </div>
+                <div class="col">
+                    <p-button label="Valider" (onClick)="submit()" icon="pi pi-check" iconPos="right"></p-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

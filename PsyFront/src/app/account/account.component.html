@@ -1,0 +1,29 @@
+<div class="row justify-content-center mt-5">
+    <div class="col">
+        <div class="card text-center mt-3" *ngIf="user">
+            <div class="card-body">
+                {{ user.email }}
+            </div>
+        </div>
+        <div class="card text-center mt-3" *ngIf="psy">
+            <div class="card-body">
+                {{ psy.email }}
+            </div>
+        </div>
+    </div>
+    <div class="col" *ngIf="appointments">
+        <div class="card text-center mt-3" *ngFor="let ap of appointments">
+            <div class="card-body">
+                <div class="row">
+                    <p>{{ ap.date }}</p>
+                </div>
+                <div class="row">
+                    <p>{{ ap.duration }}</p>
+                </div>
+                <div class="row">
+                    <p>{{ ap.appointmentAddress.streetNumber }} {{ ap.appointmentAddress.street }} {{ ap.appointmentAddress.town }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

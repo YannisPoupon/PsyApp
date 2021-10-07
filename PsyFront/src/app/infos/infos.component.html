@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row justify-content-around my-5">
+    <div class="card pointer my-3" *ngFor="let info of psyInfos; let i = index">
+      <div class="card-body">
+        <h5 class="card-title">{{ info.nom }}</h5>
+        <img src="https://source.unsplash.com/random/300x100" class="card-img-top my-3" alt="...">
+        <label for="fonction"><h5>Fonction</h5></label>
+        <div class="row my-2" id="fonction">
+          <p class="card-text">{{ info.fonction  }}</p>
+        </div>
+        <label for="formation"><h5>Formation</h5></label>
+        <div class="row my-2" id="formation">
+          <p>{{ info.formation }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-around my-5">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">
+          <h5>Nota bene</h5>
+        </div>
+        <p>Tout professionnel de sciences humaines met de côté son jugement, adopte une posture d’écoute
+          active et bienveillante, et s’engage au respect du secret professionnel. De plus, le professionnel se
+          forme tout au long de l’exercice de son métier à travers des supervisions, de manière à garantir une
+          neutralité dite bienveillante.</p>
+      </div>
+    </div>
+  </div>
+</div>

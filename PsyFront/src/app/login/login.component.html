@@ -1,0 +1,50 @@
+<div class="container d-flex justify-content-center">
+    <div class="col">
+        <div class="row justify-content-center">
+            <div class="card text-center mt-5 vignet">
+                <div class="card-body">
+                    Vous êtes un professionnel de santé ? Suivez ce lien pour <a routerLink="./psy">Vous identifier</a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="card text-center mt-5">
+                <div class="card-body"><div class="row">
+                    <h5>Connexion utilisateur</h5>
+                </div>
+                    <form [formGroup]="loginForm">
+                        <div class="form-group my-5">
+                            <label for="email">Adresse mail</label>
+                            <input type="email" id="email" formControlName="email" class="form-control">
+                        </div>
+                        <div class="form-group my-5">
+                            <label for="password">Mot de passe</label>
+                            <input type="password" id="password" formControlName="password" class="form-control">
+                        </div>
+                        <button class="btn btn-success my-5" (click)="login()"
+                            [disabled]="loginForm.invalid">Se connecter</button>
+                    </form>
+                    <div class="col mt-4">
+                        <div *ngIf="showError" class="alert alert-warning alert-dismissible fade show" role="alert">
+                            {{ errorMessage }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                    </div>
+                    <div class="col mt-4">
+                        <div *ngIf="successMessage" class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ successMessage }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="card text-center mt-5">
+                <div class="card-body">
+                    Vous n'avez pas encore de compte ? <a routerLink="/signup">Inscrivez-vous!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

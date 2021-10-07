@@ -1,0 +1,12 @@
+.pointer {
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.pointer:hover {
+    transform: scale(1.03);
+}
+
+.card {
+    width: 50rem; height: auto;
+}

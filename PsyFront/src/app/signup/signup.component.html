@@ -1,0 +1,20 @@
+<div class="col">
+    <div class="row justify-content-center">
+        <div class="card text-center mt-5 vignet">
+            <div class="card-body">
+                Vous êtes un professionnel de santé ? Suivez ce lien pour <a routerLink="./professionnal/account">Créer un compte</a>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center pt-5 mb-5">
+        <p-steps [model]="items"></p-steps>
+        <router-outlet></router-outlet>
+    </div>
+    <div class="row justify-content-center">
+        <div class="card text-center mt-2  mb-5">
+            <div class="card-body">
+                Vous avez déjà un compte ? <a routerLink="/login">Connectez-vous</a>
+            </div>
+        </div>
+    </div>
+</div>
